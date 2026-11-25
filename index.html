@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Md. Ratul Hassan Shuvo | App Developer &amp; Roboticist</title>
+    <meta
+      name="description"
+      content="Portfolio of Md. Ratul Hassan Shuvo (Shuvo) — CSE student at Varendra University, Android &amp; web app developer, roboticist, active volunteer, and marathon runner."
+    />
+    <meta name="author" content="Md. Ratul Hassan Shuvo" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shuvo. Portfolio" />
+    <meta property="og:title" content="Md. Ratul Hassan Shuvo | App Developer &amp; Roboticist" />
+    <meta
+      property="og:description"
+      content="Building robots and apps that solve real problems. Explore Android/web applications, robotics builds, research concepts, volunteering, and athletics."
+    />
+    <meta property="og:image" content="/src/assets/images/project_soccer_robot_1795326390243.jpg" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Md. Ratul Hassan Shuvo | App Developer &amp; Roboticist" />
+    <meta
+      name="twitter:description"
+      content="CSE student at Varendra University building applications and robots, volunteering in campus &amp; community events, and running marathons."
+    />
+    <meta name="twitter:image" content="/src/assets/images/project_soccer_robot_1795326390243.jpg" />
+
+    <!-- Custom R. SVG Monogram Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0F12'/%3E%3Crect x='2' y='2' width='60' height='60' rx='12' fill='none' stroke='%231B6E7A' stroke-width='2'/%3E%3Ctext x='14' y='44' font-family='system-ui,sans-serif' font-weight='700' font-size='32' fill='%23F4F7F6'%3ER%3C/text%3E%3Ccircle cx='46' cy='40' r='5' fill='%235EEAD4'/%3E%3C/svg%3E"
+    />
+
+    <!-- Google Fonts: Sora (Display), Plus Jakarta Sans (Body), JetBrains Mono (Technical Indices) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Md. Ratul Hassan Shuvo",
+        "alternateName": "Shuvo",
+        "jobTitle": "Computer Science & Engineering Student, App Developer & Roboticist",
+        "affiliation": {
+          "@type": "EducationalOrganization",
+          "name": "Varendra University",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Rajshahi",
+            "addressCountry": "BD"
+          }
+        },
+        "email": "mailto:ratulhasan01715@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/md-ratul-hassan-shuvo-56b99541b/",
+          "https://github.com/"
+        ]
+      }
+    </script>
+
+    <!-- Prevent Theme Flash Before Hydration -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('ratul-portfolio-theme');
+          var root = document.documentElement;
+          if (saved === 'light') {
+            root.classList.remove('dark');
+          } else {
+            root.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="antialiased selection:bg-[#1B6E7A]/30 selection:text-[#5EEAD4]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

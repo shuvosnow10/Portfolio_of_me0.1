@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-primary: #F5F8F7;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --accent-primary: #176B75;
+  --accent-highlight: #0D9488;
+  --accent-ink: #176B75;
+  --text-primary: #102326;
+  --text-secondary: #526467;
+  --border-subtle: rgba(15, 50, 55, 0.12);
+  --grid-line: rgba(16, 35, 38, 0.045);
+  --surface-glass: rgba(245, 248, 247, 0.82);
+  color-scheme: light;
+}
+
+.dark {
+  --bg-primary: #0B0F12;
+  --bg-secondary: #11191C;
+  --bg-card: #131D20;
+  --accent-primary: #1B6E7A;
+  --accent-highlight: #5EEAD4;
+  --accent-ink: #5EEAD4;
+  --text-primary: #F4F7F6;
+  --text-secondary: #A4B3B2;
+  --border-subtle: rgba(255, 255, 255, 0.10);
+  --grid-line: rgba(244, 247, 246, 0.035);
+  --surface-glass: rgba(11, 15, 18, 0.82);
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 240ms ease, color 240ms ease;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Sora", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .font-mono-tech {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-highlight);
+    outline-offset: 3px;
+  }
+}
+
+/* Subtle architectural robotics-lab grid background */
+.lab-grid-bg {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Ultra-subtle film/lab grain overlay */
+.lab-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
